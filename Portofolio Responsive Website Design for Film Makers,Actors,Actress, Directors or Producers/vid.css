@@ -1,0 +1,447 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins';
+    font-size: 1.375rem;
+    background-color: rgb(20, 20, 20);
+    font-weight: 400;
+    width:100%;
+  
+
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+.header{
+
+    background-color: black;
+    box-shadow: 0.0625rem, 0.0625rem, 0.25rem, 0px rgba(0, 0,  0, .1);
+    position: fixed;
+    width:100%;
+    z-index: 3;
+    opacity: 0.7;
+    
+
+}
+.header ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    overflow: hidden;
+ 
+}
+.header ul a:hover{
+    
+    color:#dc493a;
+    
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .1s ease-in-out;
+
+
+}
+.header ul a{
+    display:block;
+
+    padding:1.2rem ;
+    
+    text-decoration: none;
+}
+.header .logo{
+    float:left;
+    display: block;
+    font-size: 3rem;
+    padding-left:1.2rem ;
+    padding-right:1.2rem ;
+    padding-top: 0.2rem; 
+    font-weight: bold ;
+    letter-spacing: 4px;
+    
+    text-align: center;
+
+}
+.header .menu{
+    clear:both;
+    max-height: 0;
+    transition: max-height .2 ease-out;
+}
+.header .menu-icon{
+    
+    padding: 2.3rem 1.25rem;
+    position:relative;
+    float: right;
+    cursor: pointer;
+
+}
+.header .menu-icon .nav-icon{
+    background: #fff;
+    display:block;
+    height:2px;
+    width: 20px;
+    position: relative;
+    transition: background .2 ease-out;
+}
+.header .menu-icon .nav-icon:before{
+    background: #fff;
+    content:"";
+    display:block;
+    height: 100%;
+    position: absolute;
+    width:100%;
+    top:5px;
+    transition: all .2s ease-out;
+
+}
+.header .menu-icon .nav-icon:after{
+    background: #fff;
+    content:"";
+    display:block;
+    height: 100%;
+    position: absolute;
+    width:100%;
+    top:-5px;
+    transition: all .2s ease-out;
+
+}
+.header .menu-btn{
+    display: none;
+
+
+
+}
+.header .menu-btn:checked ~ .menu{
+
+    max-height: 300px;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform:rotate(-45deg);
+    top:0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform:rotate(45deg);
+    top:0;
+}
+.cover-img{
+    
+    margin:0px;
+    padding:0px;
+    position: relative;
+  
+}
+
+.cover-img img{
+    width:100%;
+    margin:0px;
+    padding:0px;
+    height: auto;
+    
+
+}
+
+
+@media (min-width:55em){
+    .header li{
+        float: left;
+    }
+    .header li a{
+        padding:20px 30px;
+
+    }
+    .header .menu{
+        clear:none;
+        float:right;
+        max-height: none;
+    }
+    .header .menu-icon{
+        display: none;
+
+    }
+    
+
+
+    
+}
+
+
+
+/*above is navabr css u have already seen it in home css*/
+
+
+.vheading{
+   
+
+  
+    padding:2% 0 2% 0; 
+   
+
+
+}
+.vheading h1{
+    font-family: Poppins;
+    font-weight: 700;
+    color:white;
+    font-size: 2.6em;
+
+}
+.vheading h1 b{
+    -webkit-text-stroke: 0.015em white;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-fill-color:rgba(0, 0, 0, 0);
+   
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    padding-left: 1.3%;
+    margin:0px ;
+    
+    letter-spacing: 0.05em;
+   
+
+}
+.vid{
+    width:100%;
+}
+@media (max-width:55em){
+.nbg{
+
+    padding:2% 5px;
+        
+}
+.ybg{
+    padding:2% 5px;
+}
+}
+.nbg{
+
+   
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+grid-column-gap:1em;
+padding:2% 16%;
+}
+.nbg .text-vid h1{
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.35em;
+    line-height: 1.5;
+    margin-bottom: 0.3em;
+    color:white;
+}
+.ybg{
+    background-color: white;
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    grid-gap:1em;
+    padding:2% 16%;
+
+}
+.text-vid{
+    padding:2%;
+
+
+}
+.pagination{
+    padding:3% 0%;
+    background-color: white;
+}
+.pagination a{
+    color:black;
+
+    padding: 8px 16px;
+    text-decoration:none;
+    transition: background-color .3s;	
+    
+    }
+    
+    .pagination a.active{
+    background-color:#dc493a;	
+        color:white;
+        border: 1px solid #dc493a;
+    }
+    
+    .pagination a:hover:not(.active){
+        background-color:#dc493a;
+        color:white;
+        
+}
+
+.nbg .text-vid p{
+    color: #d9d9d9;
+    font-size: 0.7em;
+    line-height: 1.71429;
+    margin-bottom: 15px;
+}
+.text-vid h1{
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.35em;
+    line-height: 1.5;
+    margin-bottom: 0.3em;
+}
+.text-vid p{
+    color: #444444;
+    font-size: 0.7em;
+    line-height: 1.71429;
+    margin-bottom: 15px;
+}
+.text-vid b{
+    color: rgb(223, 77, 61);
+    font-size: 0.6em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top:110%;
+    font-size: 400;
+}
+
+
+
+
+
+
+
+
+.footer{
+    display:grid;
+    color:white;
+    padding:4%  18% 2% 18%;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr)) ;
+    grid-row-gap:.5em;
+ 
+    background-color: #090909;
+    
+    
+}
+.nolan{
+    margin-right:3em;
+    padding-bottom: 2em;
+}
+.footer h2{
+    font-size: 1.025em;
+
+
+}
+.copyright{
+    font-size: 14px;
+    line-height: 1.71429;
+    color: #7c7c7c;
+    background-color: #090909;
+    padding-bottom: 1em;
+    padding-left: 17%;
+}
+.footer.s-m{
+    position: absolute;
+    margin-top: 0.3em;
+ 
+   
+  }
+  .footer  .s-m a{
+    display: inline-flex;
+    width: 0.2em;
+    margin-top: 0.4em;
+    height: 0.45em;
+    margin-left:6px;
+    color: #7c7c7c;
+    margin-right:1em;
+    border-radius: 50% black;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
+    font-size: 0.8em;
+    
+  }
+  .footer .s-m a:hover{
+    color: rgb(223, 77, 61);
+  }
+.footer  .s-m a i{
+    transition: 0.4s all;
+  }
+  
+
+.nolan p{
+    font-size: 0.7em;
+    line-height: 24px;
+    max-width: 325px;
+    color:rgb(209, 209, 209);
+    font-weight: 400px;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.links{
+    padding-bottom: 2em;
+}
+.link1{
+    float: left;
+    padding:0px;
+}
+.link2{
+    
+    padding-left: 150px;
+}
+
+.links a{
+
+    font-size: 0.7em;
+
+    border-spacing: 20px;
+    border-bottom: 2px dotted #dc493a;
+    color:rgb(209, 209, 209);
+    font-weight: 400px;
+    display: inline-block;
+
+}
+
+.contact-f{
+    padding:0px;
+}
+.c-text{
+    color:rgb(209, 209, 209);
+    font-weight: 400px;
+    font-size: 0.7em;
+}
+.c-one{
+    display: flex;
+    padding: 3px;
+}
+.c-one img{
+ width:31px;
+}
+.c-two{
+    display: flex;
+    padding: 3px;
+}
+.c-two img{
+    width:32px;
+    padding-top: 8px;
+   }
+.c-three{
+    display: flex;
+    padding: 3px;
+}
+.c-three img{
+    width:31px;
+   }
+
+.c-text{
+    padding-top: 6px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px;
+}
+.contact-f h2{
+    padding-left:5px;
+    padding-bottom: 10px;
+}
+
+
+
